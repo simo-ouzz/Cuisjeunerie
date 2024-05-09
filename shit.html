@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="back1.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cuisjeunerie</title>
+    <link rel="stylesheet" href="contact.css">
+<body>
+  <header class="hide">
+    <a href="#" class="logo"><span>C</span>uisjeunerie</a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
+        <li><a href="#evenement" onclick="toggleMenu();">Formation</a></li>
+        <li><a href="#menu" onclick="toggleMenu();">Diplôme</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+</header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <div class="logo-container">
+            <img src="./img/logo1.jpeg" alt="Logo" class="logo-img">
+
+</section>
+<!--section de video et ktba-->
+
+<section class="intro">
+  <div class="contenu">
+    <div class="image-container">
+      <video controls width="500" height="300" autoplay>
+      <source src="./img/WhatsApp Video 2023-08-20 at 16.37.21.mp4"/>
+      </video>
+      
+    </div>
+    <div class="text-container">
+      <h2>Savourer l'Aventure Culinaire : Explorez, Créez, Inspirez !</h2>
+      <p>
+          Découvrez le monde infini des saveurs et des possibilités infinies. Rejoignez-nous pour explorer votre passion, développer votre créativité et éveiller vos papilles dans l'univers palpitant de la cuisine professionnelle.
+      </p>
+  </div>
+  
+  </div>
+</section>
+<section class="Evenement" id="evenement">
+  <div class="row">
+      <div class="col50">
+          <h2 class="titre-texte"><span>F</span>ormation</h2>
+          <p>Dans le monde culinaire en évolution, "Cuisine Connectée" vise à éduquer les lycéens sur les opportunités de carrière et la durabilité.For more information downlaod the pdf below.</p>
+          <a href="./img/Filières de formation.pdf" class="btn1" download>Filières</a>
+      </div>
+      <div class="col50">
+          <div class="img event-img">
+              <img src="./img/event.jpg" alt="image">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class ="menu" id="menu">
+
+<iframe frameBorder="0" src="index.html" width="1581x" height="825" frameborder="0" scrolling="auto" style="margin-left: -98px;"></iframe>
+</section>
+<section class ="contact" id="contact">
+
+    <iframe frameBorder="0" src="index2.html" width="1581x" height="825" frameborder="0" scrolling="auto" style="margin-left: -98px;"></iframe>
+    </section>
+
+
+
+
+ <div class="copyright">
+     <p>copyright 2024 <a href="#">Joseph Benza</a> </p>
+ </div>
+
+
+
+ <script type="text/javascript">
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function(){
+      const header = document.querySelector('header');
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 0) {
+          header.classList.add("hide");
+      } else {
+          header.classList.remove("hide");
+      }
+
+      if (currentScroll <= 0) {
+          header.classList.remove("hide");
+          header.classList.add("sticky");
+      } else {
+          header.classList.remove("sticky");
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour éviter des valeurs négatives
+  });
+
+  function toggleMenu(){
+      const menuToggle = document.querySelector('.menuToggle');
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+  }
+  
+<!--event image-->
+// JavaScript
+window.addEventListener('scroll', function() {
+    var eventImg = document.querySelector('.event-img');
+    var imagePosition = eventImg.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (imagePosition < windowHeight) {
+        eventImg.classList.add('animate');
+    } else {
+        eventImg.classList.remove('animate'); // Pour annuler l'animation si l'image sort de la vue
+    }
+});
+
+</script>
+ </script>
+</body>
+</html>
