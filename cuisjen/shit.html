@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="back1.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cuisjeunerie</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="vid-player.js"></script>
+<body>
+  <header class="hide">
+    <a href="#" class="logo"><span>C</span>uisjeunerie</a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul class="navbar">
+        <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
+        <li><a href="#evenement" onclick="toggleMenu();">Formation</a></li>
+        <li><a href="#menu" onclick="toggleMenu();">Diplôme</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+</header>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <div class="logo-container">
+            <img src="./img/logo1.jpeg" alt="Logo" class="logo-img">
+
+</section>
+<section class=""></section>
+
+<!--section de video et ktba-->
+<section class="intro">
+    <iframe frameBorder="0" src="vid-player.html" width="1575" height="580" frameborder="0" scrolling="auto" style="margin-left: -90px;"></iframe>
+  </div>
+</section>
+
+<section class ="menu" id="menu">
+
+<iframe frameBorder="0" src="index.html" width="1581x" height="825" frameborder="0" scrolling="auto" style="margin-left: -98px;"></iframe>
+</section>
+<section class="#App" id="Application">
+    <iframe frameBorder="0" src="temp.html" width="1581x" height="825" frameborder="0" scrolling="auto" style="margin-left: -98px;"></iframe>
+  </section>
+
+<section class ="contact" id="contact">
+
+    <iframe frameBorder="0" src="index2.html" width="1581x" height="825" frameborder="0" scrolling="auto" style="margin-left: -98px;"></iframe>
+    </section>
+
+
+
+
+ <div class="copyright">
+     <p>copyright 2024 <a href="#">Joseph Benza</a> </p>
+ </div>
+
+
+
+ <script type="text/javascript">
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function(){
+      const header = document.querySelector('header');
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 0) {
+          header.classList.add("hide");
+      } else {
+          header.classList.remove("hide");
+      }
+
+      if (currentScroll <= 0) {
+          header.classList.remove("hide");
+          header.classList.add("sticky");
+      } else {
+          header.classList.remove("sticky");
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour éviter des valeurs négatives
+  });
+
+  function toggleMenu(){
+      const menuToggle = document.querySelector('.menuToggle');
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+  }
+  
+<!--event image-->
+// JavaScript
+window.addEventListener('scroll', function() {
+    var eventImg = document.querySelector('.event-img');
+    var imagePosition = eventImg.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (imagePosition < windowHeight) {
+        eventImg.classList.add('animate');
+    } else {
+        eventImg.classList.remove('animate'); // Pour annuler l'animation si l'image sort de la vue
+    }
+});
+
+</script>
+ </script>
+</body>
+</html>
